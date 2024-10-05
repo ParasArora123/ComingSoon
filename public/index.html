@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.birds.min.js"></script>  
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
     <!-- Stylesheets -->
     <link href="css/styles.css" rel="stylesheet">
@@ -30,7 +31,7 @@
         .text-shadow {
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Horizontal offset, Vertical offset, Blur radius, Color */
         }
-      </style>
+    </style>
 </head>
 <body class="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]">
     <div id="birds-bg" class="flex flex-col">
@@ -50,6 +51,8 @@
                 <!-- Input box and button for email subscription -->
                 <form action="/api/submit" method="POST" class="relative mt-12 w-full max-w-xl">
                     <input name="email" id="email" type="email" placeholder="Enter your email address" class="placeholder-black font-roboto py-5 px-10 pr-32 w-[105%] rounded-full border-2 border-black text-2xl focus:border focus:outline-none focus:ring-1 focus:ring-black">
+                    <!-- Honeypot field to catch bots filling out the below input -->
+                    <input type="text" name="phone" style="display:none" tabindex="-1">
                     <button type="submit" class="font-roboto absolute top-1/2 right-[-4%] transform -translate-y-1/2 bg-black text-white py-[3.5%] px-12 rounded-full text-lg">Notify Me</button>
                 </form>
             </div>
@@ -60,5 +63,6 @@
     <!-- Local scripts -->
     <script src="scripts/birds.js"></script>
     <script src="scripts/typewriter.js"></script>
+    <script src="scripts/confetti.js"></script>
 </body>
 </html>
