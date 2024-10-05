@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "build:css": "npx tailwindcss -i css/tailwind-css.css -o css/styles.css --watch"
+        "build:css": "npx tailwindcss -i public/css/tailwind-css.css -o public/css/styles.css --watch"
     },
     "devDependencies": {
         "postcss": "^8.4.47",
