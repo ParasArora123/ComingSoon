@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugee REACH</title>
+
+    <!-- Imported scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.birds.min.js"></script>  
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Stylesheets -->
+    <link href="../css/styles.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        html, body {
+          height: 100%;
+          margin: 0;
+        }
+        #birds-bg {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+        }
+        .text-shadow {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Horizontal offset, Vertical offset, Blur radius, Color */
+        }
+      </style>
+</head>
+<body class="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]">
+    <div id="birds-bg" class="flex flex-col">
+        <div class="flex flex-col pl-8 mt-10 font-roboto">
+            <div class="font-light text-3xl">Refugee</div>
+            <div class="font-medium text-4xl text-blue-950">REACH</div>
+        </div>
+        <div class="top-[11%] left-[15%]">
+            <div class="flex items-center space-x-2">
+                <div class="w-[1.2%] h-[3px] min-h-0 min-w-0 bg-black z-10 mr-1"></div>
+                <div class="font-light text-2xl">Coming Soon</div>
+            </div>
+            <div class="flex flex-col mt-16">
+                <div class="font-roboto font-semibold text-7xl text-shadow">Be the First to</div>
+                <div class="font-roboto font-semibold text-7xl mt-2 text-shadow">Witness our <span class="text-green-400 auto-type"></span></div>
+
+                <!-- Input box and button for email subscription -->
+                <form action="/api/submit" method="POST" class="relative mt-12 w-full max-w-xl">
+                    <input name="email" id="email" type="email" placeholder="Enter your email address" class="placeholder-black font-roboto py-5 px-10 pr-32 w-[105%] rounded-full border-2 border-black text-2xl focus:border focus:outline-none focus:ring-1 focus:ring-black">
+                    <button type="submit" class="font-roboto absolute top-1/2 right-[-4%] transform -translate-y-1/2 bg-black text-white py-[3.5%] px-12 rounded-full text-lg">Notify Me</button>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Local scripts -->
+    <script src="../scripts/birds.js"></script>
+    <script src="../scripts/typewriter.js"></script>
+</body>
+</html>
