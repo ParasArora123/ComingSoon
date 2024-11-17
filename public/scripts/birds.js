@@ -1,8 +1,8 @@
 VANTA.BIRDS({
     el: "#birds-bg",
     colorMode: "varianceGradient",
-    birdSize: 1,
-    quantity: 4.50,
+    birdSize: .5,
+    quantity: 3.50,
     mouseControls: true,
     touchControls: true,
     gyroControls: false,

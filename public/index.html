@@ -12,15 +12,17 @@
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
     <!-- Stylesheets -->
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="../output.css" rel="stylesheet">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap" rel="stylesheet">
 
     <style>
         html, body {
           height: 100%;
           margin: 0;
+          overflow-x: hidden;
         }
         #birds-bg {
           position: relative;
@@ -45,18 +47,71 @@
                 <div class="font-light text-2xl">Coming Soon</div>
             </div>
             <div class="flex flex-col mt-16">
-                <div class="font-roboto font-semibold text-7xl text-shadow">Be the First to</div>
-                <div class="font-roboto font-semibold text-7xl mt-2 text-shadow">Witness our <span class="text-green-400 auto-type"></span></div>
+                <div class="font-roboto font-semibold text-6xl text-shadow">Be the First to</div>
+                <div class="font-roboto font-semibold text-6xl mt-2 text-shadow">Witness our <span class="text-green-400 auto-type"></span></div>
 
                 <!-- Input box and button for email subscription -->
-                <form action="/api/submit" method="POST" class="relative mt-12 w-full max-w-xl">
+                <form action="/api/submit" method="POST" class="relative mt-12 w-full max-w-custom">
                     <input name="email" id="email" type="email" placeholder="Enter your email address" class="placeholder-black font-roboto py-5 px-10 pr-32 w-[105%] rounded-full border-2 border-black text-2xl focus:border focus:outline-none focus:ring-1 focus:ring-black">
                     <!-- Honeypot field to catch bots filling out the below input -->
                     <input type="text" name="phone" style="display:none" tabindex="-1">
-                    <button type="submit" class="font-roboto absolute top-1/2 right-[-4%] transform -translate-y-1/2 bg-black text-white py-[3.5%] px-12 rounded-full text-lg">Notify Me</button>
+                    <button type="submit" class="font-roboto absolute top-1/2 right-[-4%] transform -translate-y-1/2 bg-black text-white py-[3.75%] px-10 rounded-full text-lg">Notify Me</button>
                 </form>
+                <div class="text-base relative flex-grow mt-[4vh] w-full max-w-xl font-goudy">*If you’d like to stay updated on news and events from our new organization, fill out your contact information above!</div>
             </div>
         </div>
+
+        <!-- Right section with the circle and card -->
+        <div class="absolute top-[36%] right-[18%] transform -translate-y-1/2 w-96 h-96 bg-[#ECF6FF] rounded-full z-0"></div>
+        
+        <div class="absolute right-[20.5%] top-[22%] shadow-xl bg-white rounded-lg p-6 w-48 lg:w-80 border border-grey" style="border-width: 0.05px; max-height: 60vh; overflow-y: auto;">
+            <h3 class="text-2xl font-goudy text-center py-3" style="color: #1891FE;">OUR MISSION</h3>
+            <p class="mt-2">
+                <div class="text-gray-700 text-xl ml-[-4%] pl-3 rounded-lg font-goudy" style="background-color: rgba(0, 134, 255, 0.04);">
+                    The mission of Refugee REACH is to improve refugee health.                </div>
+                <br>
+                <div class="text-gray-700 text-xl font-goudy">
+                    There are over 36 million refugees and 110 million forcibly displaced people worldwide.  With decades of experience in the global refugee crisis, our team at Refugee REACH has personally witnessed the massive health disparities faced by refugees. A shortage of research contributes to poor health outcomes in refugees
+                </div>
+            </p>
+        </div>
+        <div class="absolute right-[1.5%] top-[26%] shadow-xl bg-white rounded-lg p-6 w-48 lg:w-80 border border-grey" style="border-width: 0.05px; max-height: 60vh; overflow-y: auto;">
+            <h3 class="text-2xl font-goudy text-center py-3" style="color: #1891FE;">OUR VISION</h3>
+            <p class="mt-2">
+                <div class="text-gray-700 text-xl ml-[-4%] pl-3 rounded-lg font-goudy" style="background-color: rgba(0, 134, 255, 0.04);">
+                    The vision of Refugee REACH is to change the narrative of refugee health to empower refugees to determine their own health outcomes.
+                </div>
+                <br>
+                <div class="text-gray-700 text-xl font-goudy">
+                    Our historical initiative, the Refugee and Asylum seeker Health Initiative (RAHI), was founded by Dr. Fatima Karaki at the University of California, San Francisco (UCSF) in 2016. <br><br> RAHI’s mission was to improve refugee health by fostering research in forcibly displaced populations globally. While RAHI enjoyed tremendous growth at UCSF, our vision evolved beyond academia. To meet growing demand, we created an independent nonprofit organization named Refugee REACH: Refugee Research Equity and Collaboration in Health.
+                </div>
+            </p>
+        </div>
+
+        <div class="absolute right-[1.5%] top-[26%] shadow-xl bg-white rounded-lg p-6 w-48 lg:w-80 border border-grey" style="border-width: 0.05px; max-height: 60vh; overflow-y: auto;">
+            <h3 class="text-2xl font-goudy text-center py-3" style="color: #1891FE;">OUR VISION</h3>
+            <p class="mt-2">
+                <div class="text-gray-700 text-xl ml-[-4%] pl-3 rounded-lg font-goudy" style="background-color: rgba(0, 134, 255, 0.04);">
+                    The vision of Refugee REACH is to change the narrative of refugee health to empower refugees to determine their own health outcomes.
+                </div>
+                <br>
+                <div class="text-gray-700 text-xl font-goudy">
+                    Our historical initiative, the Refugee and Asylum seeker Health Initiative (RAHI), was founded by Dr. Fatima Karaki at the University of California, San Francisco (UCSF) in 2016. <br><br> RAHI’s mission was to improve refugee health by fostering research in forcibly displaced populations globally. While RAHI enjoyed tremendous growth at UCSF, our vision evolved beyond academia. To meet growing demand, we created an independent nonprofit organization named Refugee REACH: Refugee Research Equity and Collaboration in Health.
+                </div>
+            </p>
+        </div>
+
+        <div class="absolute right-[22%] top-[74%] shadow-xl bg-white rounded-lg p-6 w-56 lg:w-[28rem] border border-grey" style="border-width: 0.05px; max-height: 25vh; overflow-y: auto; transform: translateY(-20px);">
+            <h3 class="text-2xl font-goudy text-center py-3" style="color: #1891FE;">OUR VALUES</h3>
+            <p class="mt-2">
+                <div class="text-gray-700 text-xl font-goudy">
+                    Though many short-term relief-oriented refugee organizations exist, Refugee REACH is unique in its focus on data, evidence-based care, efficiency, sustainability, and long-term outcomes. We value research equity and empower refugees to set their own research agenda and priorities.  Our mentorship of refugee researchers bolsters their careers, builds research capacity, and most importantly, gives refugees the agency to shape their own health outcomes. Dissemination and implementation of our research findings both raises awareness and demonstrates best practices to improve refugee health.  
+
+                    With record levels of forced displacement, our mission to improve refugee health is more important than ever.
+                </div>
+            </p>
+        </div>
+        
         
     </div>
 
